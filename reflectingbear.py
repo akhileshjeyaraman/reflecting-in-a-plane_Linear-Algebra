@@ -13,7 +13,7 @@ def build_reflection_matrix(bearBasis) : # The parameter bearBasis is a 2×2 mat
     TE = np.array([[1, 0],
                    [0, -1]])
     # Combine the matrices E and TE to produce your transformation matrix.
-    T = E @ TE
+    T = E @ TE @ transpose(E)
     # Finally, we return the result. 
     return T
  
